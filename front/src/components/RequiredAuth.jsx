@@ -1,5 +1,11 @@
-const Home = () => {
-  return <div>Home</div>;
-};
+import { useLocation, Navigate } from "react-router-dom";
 
-export default Home;
+export default function RequireAuth({ children }) {
+  let location = useLocation();
+
+  if (!localStorage.getItem("token")) {
+    return <Navigate to="/login" state={{ from: location }} replace />;
+  }
+
+  return children;
+}

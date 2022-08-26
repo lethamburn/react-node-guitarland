@@ -13,7 +13,7 @@ const {
 UserRoutes.post("/register", upload.single("avatar"), register);
 UserRoutes.post("/login", login);
 UserRoutes.get("/:id", [authorize], userByID);
-UserRoutes.patch("/:id", [authorize], update);
+UserRoutes.patch("/:id", [authorize], upload.single("avatar"),update);
 UserRoutes.delete("/:id", [authorize], remove);
 
 module.exports = UserRoutes;

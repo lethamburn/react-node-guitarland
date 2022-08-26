@@ -50,3 +50,13 @@ a:hover {
 strong {
   color: #fe4107;
 }
+
+button{
+  outline: none;
+  border: none;
+  padding: 0.3rem 1rem;
+  background-color: #fe4107;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  color:#fffbee
+}

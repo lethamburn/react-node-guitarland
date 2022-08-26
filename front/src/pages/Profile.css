@@ -1,0 +1,21 @@
+.profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.profile img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #fffbee;
+}
+
+.profile form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}

@@ -54,17 +54,15 @@ const update = async (req, res, next) => {
     const { id } = req.params;
     const user = new User(req.body);
     user._id = id;
-    if (req.file) {
-      user.avatar = req.file.path;
-    }
+    if (req.file) user.avatar = req.file.path;
     const updatedUser = await User.findByIdAndUpdate(id, user);
     if (!updatedUser) return next(setError(404, "User not found"));
     return res.status(201).json({
-      message: "Updated user",
+      message: "Updated User",
       updatedUser,
     });
   } catch (error) {
-    return next(setError(500, error.message || "Failed updating User"));
+    return next(setError(500, error.message | "Failed updated user"));
   }
 };
 
